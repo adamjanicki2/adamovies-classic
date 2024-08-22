@@ -1,7 +1,7 @@
 {
-  "name": "react-skeleton",
+  "name": "adamovies-classic",
   "version": "0.1.0",
-  "homepage": "https://adamjanicki2.github.io/react-skeleton",
+  "homepage": "https://adamjanicki2.github.io/adamovies-classic",
   "private": true,
   "dependencies": {
     "@adamjanicki/ui": "^1.1.3",
