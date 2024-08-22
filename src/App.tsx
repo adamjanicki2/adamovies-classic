@@ -11,7 +11,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about/" element={<About />} />
+        <Route path="/about" element={<About />} />
         {/* Make sure this is the last route */}
         <Route path="*" element={<NotFound />} />
       </Routes>

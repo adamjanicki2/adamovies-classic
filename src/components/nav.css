@@ -4,17 +4,19 @@
   z-index: 1000;
   background-image: linear-gradient(to right, var(--darkpurple), #2c0b4b);
   color: white;
+  border-radius: 0px 0px 24px 24px;
+  padding: 10px 28px;
 }
 
 .link-container {
   list-style-type: none;
   padding: 0;
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 .nav-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
   white-space: nowrap;
   color: var(--yellow);
   font-family: "Orbitron", var(--default-fonts);
@@ -23,7 +25,46 @@
 }
 
 .navlink-li {
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.navlink {
+  color: var(--offwhite);
+  text-decoration: none;
+  font-size: 24px;
+  opacity: 0.95;
+}
+
+.navlink-selected {
+  border-bottom: 2px solid var(--yellow);
+}
+
+.log-container {
+  margin-left: auto;
+}
+
+.button-log {
+  color: var(--darkpurple);
+  font-size: 22px;
+  padding: 8px 16px;
+  font-weight: 400;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  background-color: #e0e0e0;
+  box-shadow: 0 0 20px -10px var(--offwhite);
+}
+
+@media (hover: hover) {
+  .navlink:hover {
+    color: #fff;
+    opacity: 1;
+    border-bottom: 2px solid var(--yellow);
+  }
+  .button-log:hover {
+    background-color: #fff;
+    color: black;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,5 +90,8 @@
     width: 100%;
     display: flex;
     margin: 0.5rem 0;
+  }
+  .log-container {
+    margin-left: 0;
   }
 }

@@ -4,11 +4,20 @@ import "src/components/nav.css";
 import { UnstyledLink } from "src/components/Link";
 import { useLocation } from "react-router-dom";
 import logo from "src/images/logo.png";
+import { classNames } from "@adamjanicki/ui/utils/util";
+import { UnstyledButton } from "@adamjanicki/ui";
 
 type NavlinkProps = {
   to: string;
   children: React.ReactNode;
+  selected?: boolean;
 };
+
+const links = [
+  { name: "Home", path: "/" },
+  { name: "Movies", path: "/movies" },
+  { name: "Shows", path: "/tvshows" },
+] as const;
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -19,21 +28,29 @@ const Nav = () => {
     closeMenu();
   }, [pathname]);
 
-  const Navlink = (props: NavlinkProps) => (
+  const Navlink = ({ selected, ...props }: NavlinkProps) => (
     <li className="navlink-li">
-      <UnstyledLink className="navlink" onClick={closeMenu} {...props} />
+      <UnstyledLink
+        className={classNames(
+          "navlink",
+          selected ? "navlink-selected" : undefined
+        )}
+        onClick={closeMenu}
+        {...props}
+      />
     </li>
   );
 
   return (
-    <nav className="flex items-center justify-between w-100 nav pv2 ph4">
+    <nav className="flex items-center w-100 nav">
       <div className="flex items-center justify-between bar-container">
-        <UnstyledLink className="flex items-center nav-title" to="/">
+        <UnstyledLink className="flex items-center nav-title pr1" to="/">
           <img
             src={logo}
             alt="logo"
-            height="48px"
-            className="ba b--white br2 mr2"
+            height="45px"
+            className="ba b--white"
+            style={{ marginRight: "16px", borderRadius: 6 }}
           />
           ADAMOVIES
         </UnstyledLink>
@@ -49,10 +66,21 @@ const Nav = () => {
       </div>
       <ul
         className="flex items-center desktop link-container ma0"
-        style={{ display: open ? "flex" : undefined }}
+        style={{ display: open ? "flex" : undefined, flexGrow: 1 }}
       >
-        <Navlink to="/">Home</Navlink>
-        <Navlink to="/about/">About</Navlink>
+        {links.map(({ name, path }, i) => (
+          <Navlink key={i} selected={pathname === path} to={path}>
+            {name}
+          </Navlink>
+        ))}
+        <div className="log-container">
+          <UnstyledButton
+            className="button-log black"
+            onClick={() => window.alert("Set this up!")}
+          >
+            Sign In
+          </UnstyledButton>
+        </div>
       </ul>
     </nav>
   );

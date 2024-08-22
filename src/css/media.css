@@ -9,4 +9,7 @@
   .desktop {
     display: none;
   }
+  .navlink {
+    border: none !important;
+  }
 }

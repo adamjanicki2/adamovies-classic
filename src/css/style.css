@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@600&display=swap");
 
 :root {
   --breakpoint: 768px;
   --yellow: #efcb68;
   --darkpurple: #160c28;
-  --main-bg: #f0f8ff;
+  --offwhite: #f0f8ff;
+  --grey: #aeb7b3;
+  --main-bg: var(--offwhite);
   --default-fonts: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     sans-serif;
 }
@@ -14,13 +16,12 @@ body {
   font-family: "Inter", var(--default-fonts);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
   background-color: var(--main-bg);
 }
 
 .page-title-text {
-  font-size: calc(2.5rem + 1vw);
-  font-weight: 700;
+  font-size: 48px;
+  font-family: "Orbitron", var(--default-fonts);
 }
 
 .bordering {

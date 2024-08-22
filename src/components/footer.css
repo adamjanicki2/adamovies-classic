@@ -1,0 +1,21 @@
+footer {
+  box-shadow: 0 0 30px -10px var(--darkpurple);
+  background-image: linear-gradient(to right, #3a1160, var(--darkpurple));
+  margin-top: 20px;
+}
+
+.footer-links {
+  margin: 0 4px;
+}
+
+.footer-links:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  margin: 0 8px;
+}
+
+.footer-icons:hover {
+  opacity: 0.8;
+}
