@@ -6,9 +6,17 @@
   --darkpurple: #160c28;
   --offwhite: #f0f8ff;
   --grey: #aeb7b3;
+  --cream: #fffff7;
   --main-bg: var(--offwhite);
   --default-fonts: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
     sans-serif;
+  --box-shadow: 0 0 50px -10px #555;
+  --heartred: #ff2800;
+  --commentblue: #00d6ff;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -17,6 +25,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-bg);
+  overflow-x: hidden;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
 }
 
 .page-title-text {
@@ -26,4 +39,16 @@ body {
 
 .bordering {
   border: 2px solid green;
+}
+
+.br-25 {
+  border-radius: 25%;
+}
+
+.heart {
+  color: var(--heartred);
+}
+
+.comment {
+  color: var(--commentblue);
 }

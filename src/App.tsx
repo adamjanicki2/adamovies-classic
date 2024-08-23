@@ -3,6 +3,9 @@ import Footer from "src/components/Footer";
 import Nav from "src/components/Nav";
 import About from "src/pages/About";
 import Home from "src/pages/Home";
+import Movies from "src/pages/Movies";
+import Shows from "src/pages/Shows";
+import Review from "src/pages/Review";
 import NotFound from "src/pages/NotFound";
 
 const App = () => {
@@ -12,6 +15,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/tvshows" element={<Shows />} />
+        <Route path="/review/:id" element={<Review />} />
         {/* Make sure this is the last route */}
         <Route path="*" element={<NotFound />} />
       </Routes>

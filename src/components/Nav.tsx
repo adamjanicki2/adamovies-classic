@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { Turn as Hamburger } from "hamburger-react";
 import "src/components/nav.css";
 import { UnstyledLink } from "src/components/Link";
 import { useLocation } from "react-router-dom";
@@ -21,12 +19,6 @@ const links = [
 
 const Nav = () => {
   const { pathname } = useLocation();
-  const [open, setOpen] = useState(false);
-  const closeMenu = () => setOpen(false);
-
-  useEffect(() => {
-    closeMenu();
-  }, [pathname]);
 
   const Navlink = ({ selected, ...props }: NavlinkProps) => (
     <li className="navlink-li">
@@ -35,52 +27,40 @@ const Nav = () => {
           "navlink",
           selected ? "navlink-selected" : undefined
         )}
-        onClick={closeMenu}
         {...props}
       />
     </li>
   );
 
   return (
-    <nav className="flex items-center w-100 nav">
-      <div className="flex items-center justify-between bar-container">
-        <UnstyledLink className="flex items-center nav-title pr1" to="/">
-          <img
-            src={logo}
-            alt="logo"
-            height="45px"
-            className="ba b--white"
-            style={{ marginRight: "16px", borderRadius: 6 }}
-          />
-          ADAMOVIES
-        </UnstyledLink>
-        <div className="mobile">
-          <Hamburger
-            toggled={open}
-            onToggle={() => setOpen(!open)}
-            direction="left"
-            size={24}
-            duration={0.3}
-          />
-        </div>
-      </div>
+    <nav className="flex items-center w-100 nav flex-wrap">
+      <UnstyledLink className="flex items-center nav-title pr1" to="/">
+        <img
+          src={logo}
+          alt="logo"
+          height="45px"
+          className="ba b--white"
+          style={{ marginRight: "16px", borderRadius: 6 }}
+        />
+        ADAMOVIES
+      </UnstyledLink>
       <ul
-        className="flex items-center desktop link-container ma0"
-        style={{ display: open ? "flex" : undefined, flexGrow: 1 }}
+        className="flex flex-wrap items-center link-container ma0"
+        style={{ flexGrow: 1 }}
       >
         {links.map(({ name, path }, i) => (
           <Navlink key={i} selected={pathname === path} to={path}>
             {name}
           </Navlink>
         ))}
-        <div className="log-container">
+        <li className="log-container">
           <UnstyledButton
             className="button-log black"
             onClick={() => window.alert("Set this up!")}
           >
             Sign In
           </UnstyledButton>
-        </div>
+        </li>
       </ul>
     </nav>
   );

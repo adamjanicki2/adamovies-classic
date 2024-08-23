@@ -1,15 +1,12 @@
-.mobile {
-  display: none;
+@media only screen and (max-width: 630px) {
+  .card-wrapper {
+    width: 88vw;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-  .mobile {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-  .navlink {
-    border: none !important;
+@media only screen and (max-width: 500px) {
+  .page-title-text,
+  .nav-title {
+    font-size: 36px !important;
   }
 }

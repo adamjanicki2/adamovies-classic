@@ -1,6 +1,6 @@
 export type Children = React.ReactNode | React.ReactNode[];
 
-type Id = number;
+export type Id = number;
 
 export type Review = {
   type: "movie" | "show";
@@ -21,6 +21,13 @@ export type Review = {
   likes: Id[];
 };
 
+export type HydratedReview = Omit<Review, "admin" | "likes"> & {
+  admin: HydratedUser;
+  likes: HydratedUser[];
+  id: Id;
+  comments: number;
+};
+
 export type Draft = Partial<Review>;
 
 export type User = {
@@ -33,6 +40,10 @@ export type User = {
   currentlyWatching: string;
 };
 
+export type HydratedUser = User & {
+  id: Id;
+};
+
 export type Comment = {
   content: string;
   timestamp: number;
@@ -40,9 +51,17 @@ export type Comment = {
   user: Id;
 };
 
+export type HydratedComment = Omit<Comment, "user"> & {
+  user: HydratedUser;
+};
+
 export type Announcement = {
   title: string;
   content: string;
   timestamp: number;
   admin: Id;
+};
+
+export type HydratedAnnouncement = Omit<Announcement, "admin"> & {
+  admin: HydratedUser;
 };

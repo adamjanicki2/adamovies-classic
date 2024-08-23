@@ -1,0 +1,23 @@
+.card-wrapper {
+  background-color: var(--cream);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.5s ease-in-out;
+  width: 580px;
+  border-radius: 32px;
+  border: 2px solid var(--grey);
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+@media (hover: hover) {
+  .card-wrapper:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-poster {
+  border-radius: 10px;
+  border: 2px solid var(--yellow);
+  box-shadow: var(--box-shadow);
+  max-height: 350px;
+}
