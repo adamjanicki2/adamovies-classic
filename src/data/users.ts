@@ -1,4 +1,6 @@
-const users = [
+import type { User } from "src/types";
+
+const users: readonly User[] = [
   {
     picture:
       "https://lh6.googleusercontent.com/-vspGCNx71Gk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucluwP4h8qJZNS_I7gqCBL3pWMp_-g/s96-c/photo.jpg",

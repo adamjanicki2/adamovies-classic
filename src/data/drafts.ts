@@ -1,9 +1,10 @@
-const drafts = [
+import type { Draft } from "src/types";
+
+const drafts: readonly Draft[] = [
   {
     content: "POST ON 12/7/2021, ALSO MAKE NOTE OF PEARL HARBOR 70TH",
     type: "movie",
     director: "Steven Soderbergh",
-    rating: null,
     title: "Ocean's 11",
     runtime: 117,
     genre: "Comedy/Crime",

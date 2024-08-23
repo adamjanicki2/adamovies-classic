@@ -1,4 +1,6 @@
-const reviews = [
+import type { Review } from "src/types";
+
+const reviews: readonly Review[] = [
   {
     type: "movie",
     title: "Inception",

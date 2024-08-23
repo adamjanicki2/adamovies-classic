@@ -1,4 +1,6 @@
-const comments = [
+import type { Comment } from "src/types";
+
+const comments: readonly Comment[] = [
   {
     content: "Wow awesome review :)",
     timestamp: 1612390056938.0,

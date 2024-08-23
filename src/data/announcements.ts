@@ -1,4 +1,6 @@
-const announcements = [
+import type { Announcement } from "src/types";
+
+const announcements: readonly Announcement[] = [
   {
     title: "Weekly WandaVision Reviews!",
     content:
