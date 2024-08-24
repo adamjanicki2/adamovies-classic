@@ -1,27 +1,17 @@
-import {
-  faComment,
-  faFilm,
-  faHeart,
-  faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UnstyledLink } from "src/components/Link";
 import type { HydratedReview } from "src/types";
-import { formatDate, showInfo } from "src/util";
+import { formatDate, showInfo, typeToIcon } from "src/util";
 import "src/components/card.css";
 
 type Props = {
   review: HydratedReview;
 };
 
-const typeToIcon = {
-  show: faTv,
-  movie: faFilm,
-} as const;
-
 const Card = ({ review }: Props) => {
   return (
-    <div className="flex flex-column items-center card-wrapper pb3">
+    <div className="flex flex-column items-center card-wrapper scale pb3">
       <UnstyledLink
         to={`/review/${review.id}`}
         className="flex flex-column items-center"
@@ -29,18 +19,12 @@ const Card = ({ review }: Props) => {
         <h1 className="tc mb0 fw7">
           {review.title} ({review.releaseYear})
         </h1>
-        <h2
-          className="fw4 mv2 pb1"
-          style={{ whiteSpace: "pre-wrap", fontSize: 24 }}
-        >
+        <h2 className="fw4 mv2 pb1 f24 pre">
           <FontAwesomeIcon size="lg" icon={typeToIcon[review.type]} /> •{" "}
           {review.genre} • {showInfo(review)}
         </h2>
         <img src={review.poster} alt="" className="card-poster" />
-        <div
-          className="tc fw6 mv3"
-          style={{ whiteSpace: "pre-wrap", fontSize: 24 }}
-        >
+        <div className="tc mv3 f24 pre" style={{ fontWeight: 600 }}>
           {formatDate(review.timestamp)} • {review.rating}% •{" "}
           <FontAwesomeIcon icon={faHeart} size="xl" className="heart mh1" />{" "}
           {review.likes.length} •{" "}

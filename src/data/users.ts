@@ -5,7 +5,7 @@ const users: readonly User[] = [
     picture:
       "https://lh6.googleusercontent.com/-vspGCNx71Gk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucluwP4h8qJZNS_I7gqCBL3pWMp_-g/s96-c/photo.jpg",
     admin: true,
-    username: "bulkyendymion38",
+    username: "BulkyEndymion38",
     bio: "The Architect of Adamovies",
     favoriteShow: "Mr. Robot",
     favoriteMovie: "Interstellar",
@@ -55,7 +55,7 @@ const users: readonly User[] = [
     picture:
       "https://lh3.googleusercontent.com/-vUsJlfJ0sQg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclfC_-CXHaqO-IaOFxNcSekQ-9x3g/s96-c/photo.jpg",
     admin: true,
-    username: "trevor",
+    username: "Trevor",
     bio: "Movie fan of all genres. Soft spot for animated films and decades-old classics ",
     favoriteShow: "FMA: Brotherhood",
     favoriteMovie: "The Maltese Falcon",

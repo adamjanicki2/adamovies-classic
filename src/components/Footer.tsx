@@ -5,10 +5,7 @@ import { UnstyledLink } from "src/components/Link";
 import "src/components/footer.css";
 
 const Footer = () => (
-  <footer
-    className="flex flex-column w-100 items-center justify-center white fw4 pv3"
-    style={{ whiteSpace: "pre-wrap" }}
-  >
+  <footer className="flex flex-column w-100 items-center justify-center white fw4 pv3 pre">
     <div className="flex items-center">
       <UnstyledLink to="/faq" className="footer-links">
         FAQ

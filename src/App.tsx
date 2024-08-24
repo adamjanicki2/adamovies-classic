@@ -6,6 +6,7 @@ import Home from "src/pages/Home";
 import Movies from "src/pages/Movies";
 import Shows from "src/pages/Shows";
 import Review from "src/pages/Review";
+import Profile from "src/pages/Profile";
 import NotFound from "src/pages/NotFound";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/movies" element={<Movies />} />
         <Route path="/tvshows" element={<Shows />} />
         <Route path="/review/:id" element={<Review />} />
+        <Route path="/user/:id" element={<Profile />} />
         {/* Make sure this is the last route */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -94,3 +94,8 @@ export function getComments(reviewId: Id): HydratedComment[] {
     .filter((comment) => comment.review === reviewId)
     .map(populateComment);
 }
+
+export function getUser(id: Id): HydratedUser | null {
+  const user = users[id];
+  return user ? { ...user, id } : null;
+}
