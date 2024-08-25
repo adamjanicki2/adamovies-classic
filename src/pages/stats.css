@@ -1,0 +1,36 @@
+.stats-text {
+  font-weight: 300;
+  color: var(--offblack);
+  font-size: 28px;
+}
+
+.b {
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.stats-container {
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  border-radius: 16px;
+  background-color: var(--cream);
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 10px;
+  border: 1px solid var(--grey);
+  box-shadow: 0 0 30px -10px;
+}
+
+.movie-link {
+  text-decoration: underline;
+  color: var(--offblack);
+}
+
+.movie-link:hover {
+  color: #0269a4;
+}

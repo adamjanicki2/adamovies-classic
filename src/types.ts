@@ -19,12 +19,12 @@ export type Review = {
   admin: Id;
   poster: string;
   likes: Id[];
+  id: Id;
 };
 
 export type HydratedReview = Omit<Review, "admin" | "likes"> & {
   admin: HydratedUser;
   likes: HydratedUser[];
-  id: Id;
   comments: number;
 };
 

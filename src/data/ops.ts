@@ -23,7 +23,7 @@ export function recentReviews(amount: number = 18): HydratedReview[] {
   const recents: HydratedReview[] = [];
   let index = reviews.length - 1;
   while (recents.length < amount) {
-    recents.push(populateReview(reviews[index], index));
+    recents.push(populateReview(reviews[index]));
     index--;
   }
   return recents;
@@ -31,18 +31,18 @@ export function recentReviews(amount: number = 18): HydratedReview[] {
 
 export function getReview(id: Id): HydratedReview | null {
   const review = reviews[id];
-  return review ? populateReview(review, id) : null;
+  return review ? populateReview(review) : null;
 }
 
-export function populateReview(review: Review, id: Id): HydratedReview {
+export function populateReview(review: Review): HydratedReview {
   const userIndex = review.admin;
   const user = users[userIndex];
   const likes: HydratedUser[] = review.likes.map((like) => ({
     ...users[like],
     id: like,
   }));
-  const comments = countComments(id);
-  return { ...review, comments, id, admin: { ...user, id: userIndex }, likes };
+  const comments = countComments(review.id);
+  return { ...review, comments, admin: { ...user, id: userIndex }, likes };
 }
 
 export function populateComment(comment: Comment): HydratedComment {
@@ -59,6 +59,21 @@ export function populateAnnouncement(
   return { ...announcement, admin: { ...user, id: userIndex } };
 }
 
+const cleanString = (str: string) => str.toLowerCase().trim();
+
+const searchableFields = ["title", "director", "genre", "mpaa"] as const;
+
+function searchMatch(review: Review, query: string): boolean {
+  query = cleanString(query);
+  const adminUsername = users[review.admin].username;
+  const searchableItems = [
+    adminUsername,
+    review.releaseYear.toString(),
+    ...searchableFields.map((field) => review[field]),
+  ];
+  return searchableItems.some((item) => cleanString(item).includes(query));
+}
+
 export function findReviews(
   filter: Record<string, any>,
   options: { limit?: number; query?: string } = {}
@@ -72,12 +87,11 @@ export function findReviews(
     return true;
   });
 
-  if (options.query) {
-    const query = options.query.toLowerCase();
-    filteredReviews = filteredReviews.filter(
-      (review) =>
-        review.title.toLowerCase().includes(query) ||
-        review.content.toLowerCase().includes(query)
+  const query = options.query;
+
+  if (query) {
+    filteredReviews = filteredReviews.filter((review) =>
+      searchMatch(review, query)
     );
   }
 

@@ -17,7 +17,7 @@ export function showInfo(review: Review | HydratedReview): string | null {
 
 export function smallShowInfo(review: Review | HydratedReview): string | null {
   if (!review.season && !review.episode) {
-    return null;
+    return "";
   }
   let info = " ";
   if (review.season) {

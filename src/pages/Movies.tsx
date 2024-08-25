@@ -1,9 +1,12 @@
+import Listing from "src/components/Listing";
 import PageWrapper from "src/components/PageWrapper";
 
-const Movies = () => (
-  <PageWrapper documentTitle="Movies | Adamovies" title="Movies">
-    <p className="tc f4 fw4">Movies here!</p>
-  </PageWrapper>
-);
+const Movies = () => {
+  return (
+    <PageWrapper documentTitle="Movies | Adamovies" title="Movies">
+      <Listing filter={{ type: "movie" }} />
+    </PageWrapper>
+  );
+};
 
 export default Movies;
