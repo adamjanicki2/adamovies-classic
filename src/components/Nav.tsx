@@ -3,7 +3,6 @@ import { UnstyledLink } from "src/components/Link";
 import { useLocation } from "react-router-dom";
 import logo from "src/images/logo.png";
 import { classNames } from "@adamjanicki/ui/utils/util";
-import { UnstyledButton } from "@adamjanicki/ui";
 
 type NavlinkProps = {
   to: string;
@@ -54,12 +53,12 @@ const Nav = () => {
           </Navlink>
         ))}
         <li className="log-container">
-          <UnstyledButton
+          <UnstyledLink
+            to="https://adamovies.com/login"
             className="button-log black"
-            onClick={() => window.alert("Set this up!")}
           >
             Sign In
-          </UnstyledButton>
+          </UnstyledLink>
         </li>
       </ul>
     </nav>

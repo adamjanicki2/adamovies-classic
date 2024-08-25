@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@600&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Inter:300,600");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"); */
 
 :root {
   --breakpoint: 768px;
@@ -27,7 +29,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-bg);
-  overflow-x: hidden;
 }
 
 .underline-hover:hover {
@@ -41,6 +42,10 @@ body {
 
 .bordering {
   border: 2px solid green;
+}
+
+.offblack {
+  color: var(--offblack);
 }
 
 .br-25 {
@@ -76,4 +81,9 @@ body {
 
 .link {
   color: var(--link-color);
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

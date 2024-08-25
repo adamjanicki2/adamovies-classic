@@ -4,7 +4,13 @@ import { getComments, getReview } from "src/data/ops";
 import NotFound from "src/pages/NotFound";
 import { Id } from "src/types";
 import "src/pages/review.css";
-import { formatDate, showInfo, smallShowInfo, typeToIcon } from "src/util";
+import {
+  convertRuntime,
+  formatDate,
+  showInfo,
+  smallShowInfo,
+  typeToIcon,
+} from "src/util";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UnstyledLink } from "src/components/Link";
 import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -41,7 +47,7 @@ const Review = () => {
           <h2 className="pre tc">
             <FontAwesomeIcon size="lg" icon={typeToIcon[review.type]} /> •{" "}
             {review.genre} • {review.director} • {review.mpaa}
-            {review.runtime && <> • {review.runtime}</>}
+            {review.runtime && <> • {convertRuntime(review.runtime)}</>}
           </h2>
           <UnstyledLink
             className="fw3 link underline-hover"
@@ -74,7 +80,7 @@ const Review = () => {
             <h1 className="review-titleentry">Adameter: {review.rating}%</h1>
           </div>
           <div className="like-container" style={{ marginRight: "auto" }}>
-            <FontAwesomeIcon icon={faHeart} size="2xl" className="heart" />
+            <FontAwesomeIcon icon={faHeart} size="2x" className="heart" />
             <h2 className="ma0 pa0 ml2">{review.likes.length}</h2>
           </div>
           <h2 className="mt2 mb0" style={{ marginRight: "auto" }}>
@@ -83,7 +89,7 @@ const Review = () => {
           <p className="review-content pre mb0">{review.content}</p>
           <hr className="review-line mb2" />
           <div className="like-container mt2" style={{ marginRight: "auto" }}>
-            <FontAwesomeIcon icon={faComment} size="2xl" className="comment" />
+            <FontAwesomeIcon icon={faComment} size="2x" className="comment" />
             <h2 className="ma0 pa0 ml2">{comments.length}</h2>
           </div>
           <div className="flex flex-column w-100 mt3 ph3">

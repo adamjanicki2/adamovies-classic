@@ -7,6 +7,8 @@ import Movies from "src/pages/Movies";
 import Shows from "src/pages/Shows";
 import Review from "src/pages/Review";
 import Profile from "src/pages/Profile";
+import FAQ from "src/pages/FAQ";
+import Stats from "src/pages/Stats";
 import NotFound from "src/pages/NotFound";
 
 const App = () => {
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/tvshows" element={<Shows />} />
         <Route path="/review/:id" element={<Review />} />
         <Route path="/user/:id" element={<Profile />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/statistics" element={<Stats />} />
         {/* Make sure this is the last route */}
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -25,7 +25,7 @@ const Comment = ({ comment }: Props) => {
       >
         {comment.user.username}
       </UnstyledLink>
-      <FontAwesomeIcon size="1x" className="check-icon" icon={faCheckCircle} />{" "}
+      <FontAwesomeIcon size="1x" className="check-icon" icon={faCheckCircle} />:{" "}
       {comment.content}
     </div>
   );

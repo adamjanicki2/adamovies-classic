@@ -6,7 +6,7 @@ import "src/components/footer.css";
 
 const Footer = () => (
   <footer className="flex flex-column w-100 items-center justify-center white fw4 pv3 pre">
-    <div className="flex items-center">
+    <div className="flex items-center pre">
       <UnstyledLink to="/faq" className="footer-links">
         FAQ
       </UnstyledLink>

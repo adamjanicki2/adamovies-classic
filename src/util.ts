@@ -39,8 +39,17 @@ export function formatDate(timestamp: number, includeTime = false): string {
     )
     .replace(",", "")
     .replace(" at", "");
+  if (!includeTime) {
+    return str;
+  }
   const [d, t, p] = str.split(" ");
   return `${d} ${t}${p}`;
+}
+
+export function convertRuntime(runtime: number): string {
+  const hours = Math.floor(runtime / 60);
+  const minutes = runtime % 60;
+  return `${hours}h${minutes}m`;
 }
 
 export function resizePFP(pfp: string, size: number) {

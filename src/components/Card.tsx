@@ -10,25 +10,27 @@ type Props = {
 };
 
 const Card = ({ review }: Props) => {
+  const info = showInfo(review);
   return (
     <div className="flex flex-column items-center card-wrapper scale pb3">
       <UnstyledLink
         to={`/review/${review.id}`}
         className="flex flex-column items-center"
       >
-        <h1 className="tc mb0 fw7">
+        <h1 className="tc mb0 fw8">
           {review.title} ({review.releaseYear})
         </h1>
         <h2 className="fw4 mv2 pb1 f24 pre">
           <FontAwesomeIcon size="lg" icon={typeToIcon[review.type]} /> •{" "}
-          {review.genre} • {showInfo(review)}
+          {review.genre}
+          {info && ` • ${info}`}
         </h2>
         <img src={review.poster} alt="" className="card-poster" />
         <div className="tc mv3 f24 pre" style={{ fontWeight: 600 }}>
           {formatDate(review.timestamp)} • {review.rating}% •{" "}
-          <FontAwesomeIcon icon={faHeart} size="xl" className="heart mh1" />{" "}
+          <FontAwesomeIcon icon={faHeart} size="lg" className="heart mh1" />{" "}
           {review.likes.length} •{" "}
-          <FontAwesomeIcon icon={faComment} className="comment mh1" size="xl" />{" "}
+          <FontAwesomeIcon icon={faComment} className="comment mh1" size="lg" />{" "}
           {review.comments}
         </div>
       </UnstyledLink>

@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 const Back = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-100 pv1" style={{ marginLeft: "2%", marginTop: "2%" }}>
+    <div className="w-100" style={{ marginLeft: "2%", marginTop: "2%" }}>
       <UnstyledButton className="f24 scale" onClick={() => navigate(-1)}>
-        <FontAwesomeIcon icon={faChevronLeft} className="mr1" />
+        <FontAwesomeIcon icon={faChevronLeft} className="mr1" size="lg" />
         Back
       </UnstyledButton>
     </div>

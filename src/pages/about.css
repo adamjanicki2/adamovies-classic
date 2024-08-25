@@ -1,0 +1,25 @@
+.mail-link {
+  text-decoration: underline;
+}
+
+.mail-link:hover {
+  color: #0269a4;
+}
+
+.about-text {
+  color: var(--offblack);
+  font-size: 20px;
+  font-weight: 350;
+}
+
+.about-container {
+  max-width: 90%;
+  margin-bottom: 1%;
+  border-radius: 16px;
+  background-color: var(--cream);
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 10px;
+  border: 1px solid var(--grey);
+  box-shadow: 0 0 30px -10px;
+}

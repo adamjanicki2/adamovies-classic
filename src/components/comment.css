@@ -20,7 +20,7 @@
 
 .comment-username:hover {
   color: var(--link-color);
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .check-icon {
