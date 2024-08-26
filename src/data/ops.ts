@@ -113,3 +113,8 @@ export function getUser(id: Id): HydratedUser | null {
   const user = users[id];
   return user ? { ...user, id } : null;
 }
+
+export function randomReview(): HydratedReview {
+  const randomIndex = Math.floor(Math.random() * reviews.length);
+  return populateReview(reviews[randomIndex]);
+}

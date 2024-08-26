@@ -11,7 +11,7 @@ export const Search = ({ onChange, onSubmit, onClear }: SearchProps) => {
   return (
     <div className="flex items-center w-50">
       <input
-        type="text"
+        type="search"
         className="NI-input"
         placeholder="Search by title, director, year, genre, MPAA rating, or admin"
         onChange={(e) => {

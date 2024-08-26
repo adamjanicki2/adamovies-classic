@@ -1,20 +1,24 @@
 import PageWrapper from "src/components/PageWrapper";
+import { useScrollTop } from "src/hooks";
 import "src/pages/faq.css";
 
-const FAQ = () => (
-  <PageWrapper
-    title="Frequently Asked Questions"
-    documentTitle="FAQ | Adamovies"
-  >
-    {faqs.map(({ question, answer }) => (
-      <div className="QA-container u-auto">
-        <h1 className="QA-text">Q: {question}</h1>
-        <hr className="line-QA" />
-        <h1 className="QA-text">A: {answer}</h1>
-      </div>
-    ))}
-  </PageWrapper>
-);
+const FAQ = () => {
+  useScrollTop();
+  return (
+    <PageWrapper
+      title="Frequently Asked Questions"
+      documentTitle="FAQ | Adamovies"
+    >
+      {faqs.map(({ question, answer }) => (
+        <div className="QA-container u-auto">
+          <h1 className="QA-text">Q: {question}</h1>
+          <hr className="line-QA" />
+          <h1 className="QA-text">A: {answer}</h1>
+        </div>
+      ))}
+    </PageWrapper>
+  );
+};
 
 const faqs = [
   {

@@ -14,3 +14,31 @@
   box-shadow: var(--box-shadow);
   max-height: 350px;
 }
+
+.mini-review-container {
+  background-color: var(--cream);
+  width: 290px;
+  border: 1px solid var(--grey);
+  box-shadow: 0 0 30px -10px var(--offblack);
+  margin: 0.5%;
+  padding-bottom: 4px;
+  border-radius: 16px;
+}
+
+.mini-review-poster {
+  border-radius: 6px;
+  border: 2px solid var(--yellow);
+  max-width: 90%;
+  max-height: 175px;
+  box-shadow: 0 0 40px -10px #555;
+}
+
+.mini-review-sub {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.mini-title {
+  font-size: 24px;
+  font-weight: 600;
+}

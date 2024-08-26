@@ -2,7 +2,7 @@ import { faComment, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UnstyledLink } from "src/components/Link";
 import type { HydratedReview } from "src/types";
-import { formatDate, showInfo, typeToIcon } from "src/util";
+import { formatDate, showInfo, smallShowInfo, typeToIcon } from "src/util";
 import "src/components/card.css";
 
 type Props = {
@@ -50,6 +50,23 @@ const Card = ({ review }: Props) => {
         </UnstyledLink>
       </div>
     </div>
+  );
+};
+
+export const MiniCard = ({ review }: Props) => {
+  const info = smallShowInfo(review);
+  return (
+    <UnstyledLink
+      className="mini-review-container scale flex flex-column items-center"
+      to={`/review/${review.id}`}
+    >
+      <h1 className="mini-title tc">{review.title + info}</h1>
+      <img alt="" src={review.poster} className="mini-review-poster" />
+      <h2 className="flex items-center pre mini-review-sub">
+        <FontAwesomeIcon icon={typeToIcon[review.type]} size="lg" /> •{" "}
+        {review.rating}%
+      </h2>
+    </UnstyledLink>
   );
 };
 

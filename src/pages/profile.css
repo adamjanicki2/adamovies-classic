@@ -1,0 +1,29 @@
+.profile-pfp {
+  max-width: 90%;
+  border: 8px solid var(--offblack);
+  box-shadow: 0 0 40px -10px var(--offblack);
+}
+
+.profile-line {
+  border: 1px solid var(--offblack);
+  border-radius: 5px;
+  width: 88%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.bio-container {
+  width: 90%;
+  margin-top: 1.5%;
+  border: 1px solid var(--grey);
+  box-shadow: 0 0 30px -10px var(--offblack);
+  border-radius: 32px;
+  background-color: var(--cream);
+  padding-bottom: 16px;
+}
+
+.bio-title {
+  font-weight: 300;
+  font-size: 36px;
+  margin: 16px 8px;
+}
