@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "src/components/Footer";
 import Nav from "src/components/Nav";
@@ -10,10 +11,27 @@ import Profile from "src/pages/Profile";
 import FAQ from "src/pages/FAQ";
 import Stats from "src/pages/Stats";
 import NotFound from "src/pages/NotFound";
+import DismissibleBanner from "src/components/DismissibleBanner";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "@adamjanicki/ui";
 
 const App = () => {
+  const [bannerDismissed, setBannerDismissed] = useState(false);
   return (
     <BrowserRouter basename="/adamovies-classic">
+      {!bannerDismissed && (
+        <DismissibleBanner onDismiss={() => setBannerDismissed(true)}>
+          <span className="mr3">
+            <FontAwesomeIcon icon={faInfoCircle} /> This is a legacy, readonly
+            version of Adamovies. You can check out the current version{" "}
+            <Link to="https://adamovies.com" target="_blank" rel="noreferrer">
+              here
+            </Link>
+            .
+          </span>
+        </DismissibleBanner>
+      )}
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
