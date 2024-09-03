@@ -60,7 +60,7 @@ const Review = () => {
           <hr className="review-line" />
           <div className="flex flex-wrap justify-center w-100">
             <h1 className="review-titleentry">
-              {formatDate(review.timestamp)}
+              {formatDate(review.timestamp, true)}
             </h1>
             <h1 className="review-titleentry flex items-center">
               <img

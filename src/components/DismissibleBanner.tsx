@@ -1,26 +1,40 @@
-import { IconButton } from "@adamjanicki/ui";
+import { Animated, IconButton, Link } from "@adamjanicki/ui";
 import Banner from "@adamjanicki/ui/components/Banner";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type Props = {
-  children: React.ReactNode;
   onDismiss: () => void;
+  open: boolean;
 };
 
-const DismissibleBanner = ({ children, onDismiss }: Props) => {
+const DismissibleBanner = ({ onDismiss, open }: Props) => {
   return (
-    <Banner type="info">
-      <div className="flex justify-between w-100">
-        {children}
-        <IconButton
-          style={{ height: "fit-content" }}
-          aria-label="dismiss"
-          onClick={onDismiss}
-          icon={<FontAwesomeIcon icon={faTimes} />}
-        />
-      </div>
-    </Banner>
+    <Animated
+      visible={open}
+      duration={500}
+      enter={{ style: { opacity: 1 } }}
+      exit={{ style: { opacity: 0 } }}
+    >
+      <Banner type="info">
+        <div className="flex justify-between w-100">
+          <span className="mr3">
+            <FontAwesomeIcon icon={faInfoCircle} /> This is a legacy, readonly
+            version of Adamovies. You can check out the current version{" "}
+            <Link to="https://adamovies.com" target="_blank" rel="noreferrer">
+              here
+            </Link>
+            .
+          </span>
+          <IconButton
+            style={{ height: "fit-content" }}
+            aria-label="dismiss"
+            onClick={onDismiss}
+            icon={<FontAwesomeIcon icon={faTimes} />}
+          />
+        </div>
+      </Banner>
+    </Animated>
   );
 };
 
