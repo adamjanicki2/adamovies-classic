@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/adamovies-classic/static/css/main.cead161e.css",
-    "main.js": "/adamovies-classic/static/js/main.39533142.js",
+    "main.js": "/adamovies-classic/static/js/main.a279c12a.js",
     "static/media/logo.png": "/adamovies-classic/static/media/logo.a5b0ea43aa5f3c070151.png",
     "index.html": "/adamovies-classic/index.html"
   },
   "entrypoints": [
     "static/css/main.cead161e.css",
-    "static/js/main.39533142.js"
+    "static/js/main.a279c12a.js"
   ]
 }
