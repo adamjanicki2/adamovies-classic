@@ -2,7 +2,7 @@ import "src/components/nav.css";
 import { UnstyledLink } from "src/components/Link";
 import { useLocation } from "react-router-dom";
 import logo from "src/images/logo.png";
-import { classNames } from "@adamjanicki/ui/utils/util";
+import { classNames } from "@adamjanicki/ui/functions";
 
 type NavlinkProps = {
   to: string;
