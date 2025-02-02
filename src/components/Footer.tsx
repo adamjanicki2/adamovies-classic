@@ -29,7 +29,7 @@ const Footer = () => (
           className="footer-icons"
           to="mailto:adamoviessite@gmail.com"
         >
-          <FontAwesomeIcon icon={faEnvelope} size={"2x"} />
+          <FontAwesomeIcon icon={faEnvelope} size={"2x"} className="" />
         </UnstyledLink>
         <div> • </div>
         <UnstyledLink
@@ -38,7 +38,7 @@ const Footer = () => (
           className="footer-icons"
           to="https://www.instagram.com/adamoviesofficial/"
         >
-          <FontAwesomeIcon icon={faInstagram} size={"2x"} />
+          <FontAwesomeIcon icon={faInstagram} size={"2x"} className="" />
         </UnstyledLink>
       </div>
     </div>

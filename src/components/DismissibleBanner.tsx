@@ -19,8 +19,9 @@ const DismissibleBanner = ({ onDismiss, open }: Props) => {
       <Banner type="info">
         <div className="flex justify-between w-100">
           <span className="mr3">
-            <FontAwesomeIcon icon={faInfoCircle} /> This is a legacy, readonly
-            version of Adamovies. You can check out the current version{" "}
+            <FontAwesomeIcon icon={faInfoCircle} className="" /> This is a
+            legacy, readonly version of Adamovies. You can check out the current
+            version{" "}
             <Link to="https://adamovies.com" target="_blank" rel="noreferrer">
               here
             </Link>
@@ -30,7 +31,7 @@ const DismissibleBanner = ({ onDismiss, open }: Props) => {
             style={{ height: "fit-content" }}
             aria-label="dismiss"
             onClick={onDismiss}
-            icon={<FontAwesomeIcon icon={faTimes} />}
+            icon={<FontAwesomeIcon icon={faTimes} className="" />}
           />
         </div>
       </Banner>

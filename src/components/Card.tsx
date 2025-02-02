@@ -21,8 +21,12 @@ const Card = ({ review }: Props) => {
           {review.title} ({review.releaseYear})
         </h1>
         <h2 className="fw4 mv2 pb1 f24 pre">
-          <FontAwesomeIcon size="lg" icon={typeToIcon[review.type]} /> •{" "}
-          {review.genre}
+          <FontAwesomeIcon
+            size="lg"
+            icon={typeToIcon[review.type]}
+            className=""
+          />{" "}
+          • {review.genre}
           {info && ` • ${info}`}
         </h2>
         <img src={review.poster} alt="" className="card-poster" />

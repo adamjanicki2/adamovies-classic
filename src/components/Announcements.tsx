@@ -12,8 +12,8 @@ const Announcements = () => {
     <div className="announcements-container">
       <div className="single-announcement">
         <div className="scrolling-announcements">
-          {allAnnouncements.map((announcement) => (
-            <SingleAnnouncement announcement={announcement} />
+          {allAnnouncements.map((announcement, i) => (
+            <SingleAnnouncement key={i} announcement={announcement} />
           ))}
         </div>
       </div>
