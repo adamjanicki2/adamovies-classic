@@ -45,8 +45,12 @@ const Review = () => {
           <h1 className="tc">{review.rating}%</h1>
           <img src={review.poster} alt="" className="poster-img" />
           <h2 className="pre tc">
-            <FontAwesomeIcon size="lg" icon={typeToIcon[review.type]} /> •{" "}
-            {review.genre} • {review.director} • {review.mpaa}
+            <FontAwesomeIcon
+              size="lg"
+              icon={typeToIcon[review.type]}
+              className=""
+            />{" "}
+            • {review.genre} • {review.director} • {review.mpaa}
             {review.runtime && <> • {convertRuntime(review.runtime)}</>}
           </h2>
           <UnstyledLink

@@ -67,8 +67,12 @@ export const MiniCard = ({ review }: Props) => {
       <h1 className="mini-title tc">{review.title + info}</h1>
       <img alt="" src={review.poster} className="mini-review-poster" />
       <h2 className="flex items-center pre mini-review-sub">
-        <FontAwesomeIcon icon={typeToIcon[review.type]} size="lg" /> •{" "}
-        {review.rating}%
+        <FontAwesomeIcon
+          icon={typeToIcon[review.type]}
+          size="lg"
+          className=""
+        />{" "}
+        • {review.rating}%
       </h2>
     </UnstyledLink>
   );
