@@ -67,13 +67,12 @@ const Review = () => {
               {formatDate(review.timestamp, true)}
             </h1>
             <h1 className="review-titleentry flex items-center">
-              <img
-                src={review.admin.picture}
-                height={28}
-                width={28}
-                className="br-25 bw1 b--black ba mr1"
-                alt=""
-              />
+              <div
+                className="mh1 ba bw1 b--black br-25 fw6 f4 flex items-center justify-center"
+                style={{ width: 28, height: 28 }}
+              >
+                {review.admin.username[0]}
+              </div>
               <UnstyledLink
                 to={`/user/${review.admin.id}`}
                 className="underline-hover"

@@ -31,7 +31,6 @@ export type HydratedReview = Omit<Review, "admin" | "likes"> & {
 export type Draft = Partial<Review>;
 
 export type User = {
-  picture: string;
   admin: boolean;
   username: string;
   bio: string;

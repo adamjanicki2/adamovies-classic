@@ -3,7 +3,6 @@ import Back from "src/components/Back";
 import { findReviews, getUser } from "src/data/ops";
 import NotFound from "src/pages/NotFound";
 import { Id } from "src/types";
-import { resizePFP } from "src/util";
 import "src/pages/profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
@@ -30,11 +29,12 @@ const Profile = () => {
     <div className="flex flex-column items-center w-100">
       <Back />
       {user.admin && <h1 className="tc">(Admin)</h1>}
-      <img
-        alt=""
-        src={resizePFP(user.picture, 400)}
-        className="profile-pfp br-25"
-      />
+      <div
+        className="mh1 ba bw1 b--black br-25 fw6 flex items-center justify-center"
+        style={{ width: 400, height: 400, fontSize: 384 }}
+      >
+        {user.username[0]}
+      </div>
       <div className="flex items-center">
         <h1 className="mv0 fw7" style={{ fontSize: "42pt" }}>
           {user.username}

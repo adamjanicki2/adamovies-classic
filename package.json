@@ -1,10 +1,10 @@
 {
   "name": "adamovies-classic",
   "version": "0.1.0",
-  "homepage": "https://adamjanicki2.github.io/adamovies-classic",
+  "homepage": "https://adamjanicki.xyz/adamovies-classic",
   "private": true,
   "dependencies": {
-    "@adamjanicki/ui": "latest",
+    "@adamjanicki/ui": "^1.5.0",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",

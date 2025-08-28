@@ -2,8 +2,6 @@ import type { User } from "src/types";
 
 const users: readonly User[] = [
   {
-    picture:
-      "https://lh6.googleusercontent.com/-vspGCNx71Gk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucluwP4h8qJZNS_I7gqCBL3pWMp_-g/s96-c/photo.jpg",
     admin: true,
     username: "BulkyEndymion38",
     bio: "The Architect of Adamovies",
@@ -12,8 +10,6 @@ const users: readonly User[] = [
     currentlyWatching: "The Bad Batch",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/a-/AOh14GizG52gYS7JcUTbUDVIrpptNKJxy8IUMI_JgYa8=s96-c",
     admin: false,
     username: "ace2015",
     bio: "Your friendly neighborhood detective",
@@ -22,8 +18,6 @@ const users: readonly User[] = [
     currentlyWatching: "Mystery MAchine",
   },
   {
-    picture:
-      "https://lh6.googleusercontent.com/-5fOs-aJts6Y/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucktebMcRhPk89SZTFl5MEbLFt-TdA/s96-c/photo.jpg",
     admin: false,
     username: "cautiousirony205",
     bio: "Hanging with my buddies Mike & Trev! From San Andreas",
@@ -32,8 +26,6 @@ const users: readonly User[] = [
     currentlyWatching: "Not Set",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/a-/AOh14GgyDXZWIgXbchTm45pwrRJvbHDd7As-h5nLSIsBy_E=s96-c",
     admin: true,
     username: "ought2gobyebye!",
     bio: "Best Adamovies user!",
@@ -42,8 +34,6 @@ const users: readonly User[] = [
     currentlyWatching: "Not Set",
   },
   {
-    picture:
-      "https://lh6.googleusercontent.com/-XlPgBxlZ9QU/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucn3t0WYIa-Gce0agvxBiTi5g7czlQ/s96-c/photo.jpg",
     admin: true,
     username: "swaglord69",
     bio: "Adamovies Influencer (business inquiries: wangh491@gmail.com)",
@@ -52,8 +42,6 @@ const users: readonly User[] = [
     currentlyWatching: "Black Mirror",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/-vUsJlfJ0sQg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclfC_-CXHaqO-IaOFxNcSekQ-9x3g/s96-c/photo.jpg",
     admin: true,
     username: "Trevor",
     bio: "Movie fan of all genres. Soft spot for animated films and decades-old classics ",
@@ -62,8 +50,6 @@ const users: readonly User[] = [
     currentlyWatching: "WandaVision",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/a-/AOh14GjfnG4x8yOrVTt4OajxOuW_ccbK9CDCj6CHAAfD1w=s96-c",
     admin: true,
     username: "worthiestcloth1",
     bio: "Ecstatic Adamovies user!",
@@ -72,8 +58,6 @@ const users: readonly User[] = [
     currentlyWatching: "Prison Break",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/-WfQilevrmDA/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmKlI6gcIs9HJgEjNKXYCquEZdbKQ/s96-c/photo.jpg",
     admin: false,
     username: "giantfavor054326",
     bio: "Happy Adamovies user!",
@@ -82,8 +66,6 @@ const users: readonly User[] = [
     currentlyWatching: "Not Set",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/-FBWpOU4TnAw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucm0mJcG4HaBIJeSubTYv176w6QTkg/s96-c/photo.jpg",
     admin: true,
     username: "kh",
     bio: "Happy Adamovies user!",
@@ -92,11 +74,9 @@ const users: readonly User[] = [
     currentlyWatching: "anime",
   },
   {
-    picture:
-      "https://lh3.googleusercontent.com/a-/AOh14GiZiL_G16_lJ14VHGSfgJEAYqara2Styr84gS-hqw=s96-c",
     admin: true,
     username: "brendanmwagner",
-    bio: " Adamovies Verified Creator",
+    bio: "Adamovies Verified Creator",
     favoriteShow: "Silicon Valley",
     favoriteMovie: "Black Panther",
     currentlyWatching: "WandaVision",

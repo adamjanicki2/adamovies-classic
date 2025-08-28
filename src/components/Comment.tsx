@@ -12,13 +12,12 @@ const Comment = ({ comment }: Props) => {
   return (
     <div className="comment-body pre">
       {formatDate(comment.timestamp, true)} |{" "}
-      <img
-        src={comment.user.picture}
-        className="br-25 ba bw1 b--black"
-        width={18}
-        height={18}
-        alt=""
-      />
+      <div
+        className="mh1 ba bw1 b--black br-25 fw6 flex items-center justify-center"
+        style={{ width: 18, height: 18 }}
+      >
+        {comment.user.username[0]}
+      </div>
       <UnstyledLink
         className="comment-username mh1"
         to={`/user/${comment.user.id}`}

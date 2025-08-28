@@ -34,13 +34,12 @@ const SingleAnnouncement = ({
           {formatDate(announcement.timestamp, true)} |{" "}
         </h3>
         <div className="flex items-center">
-          <img
-            src={announcement.admin.picture}
-            height="18px"
-            width="18px"
-            alt=""
-            className="mh1 ba bw1 b--black br-25"
-          />
+          <div
+            className="mh1 ba bw1 b--black br-25 fw6 f5 flex items-center justify-center"
+            style={{ width: 18, height: 18 }}
+          >
+            {announcement.admin.username[0]}
+          </div>
           <UnstyledLink
             to={`/user/${announcement.admin.id}`}
             className="underline-hover"

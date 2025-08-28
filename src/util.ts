@@ -52,10 +52,6 @@ export function convertRuntime(runtime: number): string {
   return `${hours}h${minutes}m`;
 }
 
-export function resizePFP(pfp: string, size: number) {
-  return pfp.replace("/s96-c/", `/s${size}-c/`);
-}
-
 export const typeToIcon = {
   show: faTv,
   movie: faFilm,

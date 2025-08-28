@@ -39,13 +39,12 @@ const Card = ({ review }: Props) => {
         </div>
       </UnstyledLink>
       <div className="flex items-center">
-        <img
-          src={review.admin.picture}
-          alt=""
-          className="mr1 br-25 ba b--black bw1"
-          width={28}
-          height={28}
-        />
+        <div
+          className="mh1 ba bw1 b--black br-25 fw6 f3 flex items-center justify-center"
+          style={{ width: 28, height: 28 }}
+        >
+          {review.admin.username[0]}
+        </div>
         <UnstyledLink
           to={`/user/${review.admin.id}`}
           className="underline-hover"
